@@ -2,25 +2,19 @@
 int main ()
 {
 	int numerouser;//variabile numero utente
+	int incremento;
 	int decremento;
+
 	printf("inserire un numero  \n" );//richiesta scritta all'utente
 	scanf("%d",&numerouser);//input dall'utente
 
-	printf("%d" ,numerouser);//stampa  risultato input
-	printf("questo è il tuo input\n"   );
-	if (numerouser == numerouser)
-		{
-		numerouser ++;
-		}
+	incremento = numerouser +1; //aumenta il valore di 1
 
-	printf("%d il tuo nuovo input:"   ,numerouser);
-	printf("Inserisci nuovo numero \n");
+	printf("incremento: %d\n",incremento);
 
-	scanf("%d",&decremento);
-	if(numerouser = numerouser)
-	{
-	decremento -- ;
-	}
-	printf("%d il tuo nuovo punteggio:"   ,decremento);
+	decremento = numerouser -1;//diminuisce il valore di 1
 
+	printf("decremento: %d\n",decremento);
+
+return 0;
 }
