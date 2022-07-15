@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 void menu ();
@@ -13,7 +14,8 @@ int main ()
 		do{
 		menu ();
 
-		scanf  ("%c", &scelta);
+		scanf  (" %c", &scelta);
+
 
 		switch ( scelta )
 	{
@@ -27,11 +29,11 @@ int main ()
 			ins_string();
 			break;
 			default:
-			printf("Fare una scelta \n  \n"  );
-			break;
+			printf("Fare una scelta \n "  );
+
 
 	}
-			}while  ( scelta != 'A'  && scelta != 'B' && scelta !=  'C' );//si riferisce  fatto che se l 'utente non sceglie una delle tre opzioni, riparte il ciclo.
+			}while  ( scelta != 'A'  || scelta != 'B' || scelta !=  'C' );//si riferisce  fatto che se l 'utente non sceglie una delle tre opzioni, riparte il ciclo.
 
 
 	return 0;
@@ -40,17 +42,18 @@ int main ()
 	void menu ()
 	{
 
-	printf ("Benvenuto, sono un assistente digitale, posso aiutarti a sbrigare alcuni compiti \n"      );
-	printf ("Come posso aiutarti?\n"   );
-	printf ( "A . Moltiplicare due numeri\n B.dividere due numeri \n C.inserire una stringa\n"        );
+	printf ("\nBenvenuto, sono un assistente digitale, posso aiutarti a sbrigare alcuni compiti \n"      );
+	printf ("\nCome posso aiutarti?\n"   );
+	printf ("\nA . Moltiplicare due numeri\n B.dividere due numeri \n C.inserire una stringa\n"        );
 	}
 
 
 	void moltiplica()
 
 	{
-		int a, b = 0;
 
+		int a, b = 0;
+		
 		printf("Inserisci il primo numero  da moltiplicare:\n"  );
 		scanf ("%d", &a);
 		printf("inserire second numero da moltiplicare:\n"  );
@@ -73,7 +76,7 @@ int main ()
 		printf ("inserisci il denumeratore:"  );
 		scanf ("%f" , &b);
 
-		 float divisione = (float)  a / b ; //sostituita % con / in quanto la funzione  richiede una divisione
+		 float divisione =   a / b ; //sostituita % con / in quanto la funzione  richiede una divisione
 		printf ("La divisione tra %g e %g è: %g"    , a,b, divisione);
 		/*ho provato ad usare l'operatore cast, ma non sono riuscito a capire come scrivere la sintassi.
 		Ho provato a rimediare usando '%g' e come metodo seppure non idoneo, sembrerebbe ovviare al problema
@@ -89,6 +92,7 @@ int main ()
 		scanf ("%s", &stringa);
 
 }
+
 
 
 
